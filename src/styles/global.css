@@ -38,7 +38,7 @@
 /* ── Navigation ───────────────────────────────────────────── */
 
 .nav-link {
-  color: #ffffff;
+  color: #4a3580;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -66,28 +66,29 @@
 /* ── Buttons ──────────────────────────────────────────────── */
 
 .btn-primary {
-  background: linear-gradient(135deg, #AE9CEE, #AD9BED);
-  color: white;
+  background: var(--btn-primary, linear-gradient(135deg, #C59434, #d4a843));
+  color: var(--btn-primary-text, #1A1A1B);
   border: none;
   padding: 14px 32px;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(174, 156, 238, 0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(174, 156, 238, 0.6);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.22);
+  filter: brightness(1.07);
 }
 
 .btn-outline {
   background: transparent;
-  color: #AE9CEE;
-  border: 2px solid #AE9CEE;
+  color: var(--btn-outline, #C59434);
+  border: 2px solid var(--btn-outline, #C59434);
   padding: 12px 32px;
   border-radius: 50px;
   font-weight: 600;
@@ -98,7 +99,7 @@
 }
 
 .btn-outline:hover {
-  background: #AE9CEE;
+  background: var(--btn-outline, #C59434);
   color: white;
   transform: translateY(-2px);
 }
@@ -146,4 +147,23 @@
 
 @media (max-width: 480px) {
   .products-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Theme-aware nav link (overrides old lavender) ────────── */
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+}
+.nav-link:hover { color: var(--accent, #C59434) !important; }
+
+/* ── Carousel / media grid ────────────────────────────────── */
+@media (max-width: 900px) {
+  .carousel-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 500px) {
+  .carousel-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Trust badges grid ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .trust-grid { grid-template-columns: 1fr !important; }
 }
