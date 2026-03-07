@@ -19,7 +19,7 @@ export default function ProductsSection() {
       position: "relative", zIndex: 1,
     }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <SectionHeader eyebrow="Our Collection" title="Our Collection" />
+        <SectionHeader eyebrow="Your one-stop destination for all types of musical instruments in Pune" title="Our Collection" />
 
         {/* Trust badges */}
         <div style={{

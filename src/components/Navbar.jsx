@@ -117,16 +117,6 @@ export default function Navbar() {
               }}>
                 Tarang Musicals
               </span>
-              <span style={{
-                fontSize: 10,
-                color: COLORS.textMuted,
-                letterSpacing: "0.04em",
-                fontFamily: "'Lora', Georgia, serif",
-                fontStyle: "italic",
-                lineHeight: 1,
-              }}>
-                Your one-stop destination for all types of musical instruments in Pune
-              </span>
             </div>
           </div>
 
@@ -144,60 +134,34 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Search */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
-          {searchOpen ? (
-            <div style={{
-              display: "flex", alignItems: "center",
-              background: COLORS.searchBg,
-              border: `1px solid ${iconBorder}`,
-              borderRadius: 24,
-              padding: "4px 14px",
-              gap: 8,
-            }}>
-              <Search size={14} color={iconColor} />
-              <input
-                autoFocus
-                value={searchVal}
-                onChange={e => setSearchVal(e.target.value)}
-                onBlur={() => { if (!searchVal) setSearchOpen(false); }}
-                placeholder="Search instruments..."
-                style={{
-                  background: "transparent",
-                  border: "none",
-                  outline: "none",
-                  color: COLORS.textInverse,
-                  fontSize: 13,
-                  width: 180,
-                }}
-              />
-              <button onClick={() => { setSearchOpen(false); setSearchVal(""); }}
-                style={{ background: "none", border: "none", cursor: "pointer", color: COLORS.textMuted, fontSize: 18, lineHeight: 1 }}>
-                ×
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={() => setSearchOpen(true)}
-              style={{
-                background: COLORS.searchBg,
-                border: "1px solid rgba(255,255,255,0.12)",
-                borderRadius: 24,
-                padding: "7px 14px",
-                display: "flex", alignItems: "center", gap: 7,
-                cursor: "pointer",
-                color: COLORS.textMuted,
-                fontSize: 12,
-                transition: "all 0.2s",
-              }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = iconBorder; e.currentTarget.style.color = iconColor; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; e.currentTarget.style.color = COLORS.textMuted; }}
-            >
-              <Search size={13} />
-              Search
-            </button>
-          )}
-        </div>
+       {/* Shop Online */}
+        <a
+          href="https://vyaparapp.in/store/tarangmusicals"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            background: `linear-gradient(135deg, ${COLORS.gold}, #c9a227)`,
+            color: COLORS.dark,
+            textDecoration: "none",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            padding: "8px 18px",
+            borderRadius: 50,
+            whiteSpace: "nowrap",
+            boxShadow: "0 2px 12px rgba(212,175,55,0.35)",
+            transition: "all 0.2s ease",
+            flexShrink: 0,
+          }}
+          onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(212,175,55,0.55)"; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(212,175,55,0.35)"; }}
+        >
+          🛒 Shop Online
+        </a>
 
       </nav>
     </header>
