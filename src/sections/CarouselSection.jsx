@@ -10,7 +10,6 @@ const REEL_PERMALINKS = [
   "https://www.instagram.com/reel/DUki33ijObB/?utm_source=ig_embed&utm_campaign=loading",
   "https://www.instagram.com/reel/DUusCs8jH21/?utm_source=ig_embed&utm_campaign=loading",
   "https://www.instagram.com/reel/DUiCEzHjGZB/?utm_source=ig_embed&utm_campaign=loading",
-  "https://www.instagram.com/reel/DUTq_eIDEJP/?utm_source=ig_embed&utm_campaign=loading",
 ];
 
 export default function CarouselSection() {
@@ -50,10 +49,11 @@ export default function CarouselSection() {
 
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(5, 1fr)",
+        gridTemplateColumns: "repeat(4, 1fr)",
         gap: 16,
-        maxWidth: 1200,
+        maxWidth: 960,
         margin: "0 auto",
+        justifyContent: "center",
       }}
         className="carousel-grid"
       >
