@@ -74,8 +74,8 @@ export default function Navbar() {
           <span style={{ color: "rgba(255,255,255,0.15)", fontSize: 14 }}>|</span>
         </div>
 
-        {/* Right: Google reviews */}
-        <StarRating rating={4.8} count={120} />
+        {/* Right: Google reviews
+        <StarRating rating={4.8} count={120} /> */}
       </div>
 
       {/* ── Main navbar ─────────────────────────────────── */}
